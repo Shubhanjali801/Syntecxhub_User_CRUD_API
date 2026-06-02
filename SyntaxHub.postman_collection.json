@@ -1,0 +1,450 @@
+{
+  "info": {
+    "_postman_id": "38220fa4-78e4-4b2d-905b-f9d0f74e7097",
+    "name": "SyntaxHub",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43522881"
+  },
+  "item": [
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "creatpost",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDM2YWExZDkyNjc0NzlhY2VlODM5MSIsImlhdCI6MTc3NTUzNTg0NiwiZXhwIjoxNzc4MTI3ODQ2fQ.FaB71XOcowIM-3XZEjnJJpSPVHyi7csL7jTLlGLU6Aw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"John dey\",\r\n  \"email\": \"jone_dey998@example.com\",\r\n  \"age\": 26,\r\n  \"phone\": \"8449799875\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "users"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "creatpost",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"John dey\",\r\n  \"email\": \"jone_dey998@example.com\",\r\n  \"age\": 26,\r\n  \"phone\": \"8449799875\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/users",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "users"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "226"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"e2-PiN15aYDmZ0/7swYL4w4qpanq3k\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 02 Jun 2026 21:57:38 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"name\": \"John dey\",\n        \"email\": \"jone_dey998@example.com\",\n        \"age\": 26,\n        \"phone\": \"8449799875\",\n        \"_id\": \"6a1f51d2ede81ee73ed64f95\",\n        \"createdAt\": \"2026-06-02T21:57:38.304Z\",\n        \"updatedAt\": \"2026-06-02T21:57:38.304Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "getAllusers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "users"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "getAllusers",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/api/users",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "users"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1048"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"418-cdol1RdWUu1zQ2+2b3W2jyxVUDk\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 02 Jun 2026 21:56:44 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"count\": 5,\n    \"data\": [\n        {\n            \"_id\": \"6a1f5061ede81ee73ed64f90\",\n            \"name\": \"Shubhanjali\",\n            \"email\": \"shubh@example.com\",\n            \"age\": 25,\n            \"phone\": \"9876543210\",\n            \"createdAt\": \"2026-06-02T21:51:29.152Z\",\n            \"updatedAt\": \"2026-06-02T21:51:29.152Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1f509bede81ee73ed64f91\",\n            \"name\": \"Pankaj Jani\",\n            \"email\": \"pakanjani998@example.com\",\n            \"age\": 24,\n            \"phone\": \"8789790475\",\n            \"createdAt\": \"2026-06-02T21:52:27.896Z\",\n            \"updatedAt\": \"2026-06-02T21:52:27.896Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1f50bcede81ee73ed64f92\",\n            \"name\": \"Alice\",\n            \"email\": \"alice_ani998@example.com\",\n            \"age\": 24,\n            \"phone\": \"8849790475\",\n            \"createdAt\": \"2026-06-02T21:53:00.158Z\",\n            \"updatedAt\": \"2026-06-02T21:53:00.158Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1f50ddede81ee73ed64f93\",\n            \"name\": \"Bob\",\n            \"email\": \"bob_janii998@example.com\",\n            \"age\": 24,\n            \"phone\": \"8849799875\",\n            \"createdAt\": \"2026-06-02T21:53:33.894Z\",\n            \"updatedAt\": \"2026-06-02T21:53:33.894Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a1f50f5ede81ee73ed64f94\",\n            \"name\": \"Charlie\",\n            \"email\": \"charli_janii998@example.com\",\n            \"age\": 26,\n            \"phone\": \"8459799875\",\n            \"createdAt\": \"2026-06-02T21:53:57.113Z\",\n            \"updatedAt\": \"2026-06-02T21:53:57.113Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "getUserbyId",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/users/6a1f5061ede81ee73ed64f90",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "users",
+                "6a1f5061ede81ee73ed64f90"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "getUserbyId",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/api/users/6a1f5061ede81ee73ed64f90",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "users",
+                    "6a1f5061ede81ee73ed64f90"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "223"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"df-LcYp1RMtljZ7o58HtobNUgMpqDw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 02 Jun 2026 21:58:39 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6a1f5061ede81ee73ed64f90\",\n        \"name\": \"Shubhanjali\",\n        \"email\": \"shubh@example.com\",\n        \"age\": 25,\n        \"phone\": \"9876543210\",\n        \"createdAt\": \"2026-06-02T21:51:29.152Z\",\n        \"updatedAt\": \"2026-06-02T21:51:29.152Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "updateUser",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Simala Sima\",\r\n  \"email\": \"simla89798@example.com\",\r\n  \"age\": 26,\r\n  \"phone\": \"9989799875\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/users/6a1f5061ede81ee73ed64f90",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "users",
+                "6a1f5061ede81ee73ed64f90"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "updateUser",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Simala Sima\",\r\n  \"email\": \"simla89798@example.com\",\r\n  \"age\": 26,\r\n  \"phone\": \"9989799875\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/users/6a1f5061ede81ee73ed64f90",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "users",
+                    "6a1f5061ede81ee73ed64f90"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "228"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"e4-/t/ayiE+ZaKvlzNvpo47S1Hq5Fc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 02 Jun 2026 22:01:31 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6a1f5061ede81ee73ed64f90\",\n        \"name\": \"Simala Sima\",\n        \"email\": \"simla89798@example.com\",\n        \"age\": 26,\n        \"phone\": \"9989799875\",\n        \"createdAt\": \"2026-06-02T21:51:29.152Z\",\n        \"updatedAt\": \"2026-06-02T22:01:30.991Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "deleteUserById",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Simala Sima\",\r\n  \"email\": \"simla89798@example.com\",\r\n  \"age\": 26,\r\n  \"phone\": \"9989799875\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/users/6a1f5061ede81ee73ed64f90",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "users",
+                "6a1f5061ede81ee73ed64f90"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "deleteUserById",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Simala Sima\",\r\n  \"email\": \"simla89798@example.com\",\r\n  \"age\": 26,\r\n  \"phone\": \"9989799875\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/users/6a1f5061ede81ee73ed64f90",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "users",
+                    "6a1f5061ede81ee73ed64f90"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "54"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"36-U3bFObQjPKn4UTk58ToYjyCEL80\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 02 Jun 2026 22:02:40 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"User deleted successfully\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
